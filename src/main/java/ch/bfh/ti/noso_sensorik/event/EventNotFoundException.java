@@ -1,4 +1,4 @@
-package ch.bfh.ti.noso_sensorik;
+package ch.bfh.ti.noso_sensorik.event;
 
 
 public class EventNotFoundException extends RuntimeException {

@@ -1,4 +1,4 @@
-package ch.bfh.ti.noso_sensorik;
+package ch.bfh.ti.noso_sensorik.event;
 
 
 import org.springframework.http.HttpStatus;

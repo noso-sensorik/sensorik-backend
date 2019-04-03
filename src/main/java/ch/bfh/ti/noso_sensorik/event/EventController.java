@@ -1,4 +1,4 @@
-package ch.bfh.ti.noso_sensorik;
+package ch.bfh.ti.noso_sensorik.event;
 
 import java.util.List;
 
@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import jdk.internal.jline.internal.Log;
+
 @RestController
 public class EventController {
-	
+    protected static final String TAG = "EventController";
+
 	private final EventRepository repository;
 
 	EventController(EventRepository repository) {
@@ -30,7 +33,10 @@ public class EventController {
 	
 	@PostMapping("/events")
 	Event newEvent(@RequestBody Event newEvent) {
-		return repository.save(newEvent);
+		System.out.println("processing new event posting...");
+		Event tmpEvent = repository.save(newEvent);
+		System.out.println("successfully processed new event posting!");
+		return tmpEvent;
 	}
 	
 	// Single item
