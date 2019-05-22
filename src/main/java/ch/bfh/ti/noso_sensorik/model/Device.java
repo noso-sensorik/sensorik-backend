@@ -1,4 +1,4 @@
-package ch.bfh.ti.noso_sensorik.device;
+package ch.bfh.ti.noso_sensorik.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -32,13 +32,12 @@ public class Device {
 	@OneToMany
 	private Collection<Event> eventList = new ArrayList<Event>();
 
-	public Device(DeviceType type, String label, String model, String manufacturer, String loc, String mac ) {
+	public Device(DeviceType type, String label, String model, String manufacturer, String location, String macadress ) {
 		this.type = type;
 		this.label = label;
 		this.model = model;
 		this.manufacturer = manufacturer;
-		this.location = loc;
-		this.macadress = mac;
-		
+		this.location = location;
+		this.macadress = macadress;
 	}
 }
